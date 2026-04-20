@@ -1,0 +1,339 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/bottomBar"
+        android:background="@drawable/bg_gradient">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <!-- 🔥 TOP BAR -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <ImageButton
+                    android:id="@+id/btnAdmin"
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
+                    android:src="@android:drawable/ic_menu_manage"
+                    android:background="@android:color/transparent"/>
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="1dp"
+                    android:layout_weight="1"/>
+
+                <ImageButton
+                    android:id="@+id/btnUser"
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
+                    android:src="@android:drawable/ic_menu_myplaces"
+                    android:background="@android:color/transparent"/>
+            </LinearLayout>
+
+            <!-- ================= ITEMS ================= -->
+
+            <!-- 🔁 FUNCTION STYLE ITEM (REPEAT SAFE) -->
+
+            <!-- POTATO -->
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:padding="12dp" android:background="#E8F5E9" android:layout_margin="8dp">
+                <ImageView android:layout_width="60dp" android:layout_height="60dp" android:src="@drawable/potato"/>
+                <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content" android:orientation="vertical" android:layout_marginStart="12dp">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Potato - ₹13/kg" android:textStyle="bold"/>
+                    <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content">
+                        <Button android:id="@+id/pMinus" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="-" />
+                        <TextView android:id="@+id/pQty" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="0" android:padding="10dp"/>
+                        <Button android:id="@+id/pPlus" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="+" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- ONION -->
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:padding="12dp" android:background="#FFF3E0" android:layout_margin="8dp">
+                <ImageView android:layout_width="60dp" android:layout_height="60dp" android:src="@drawable/onion"/>
+                <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content" android:orientation="vertical" android:layout_marginStart="12dp">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Onion - ₹15/kg" android:textStyle="bold"/>
+                    <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content">
+                        <Button android:id="@+id/oMinus" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="-" />
+                        <TextView android:id="@+id/oQty" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="0" android:padding="10dp"/>
+                        <Button android:id="@+id/oPlus" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="+" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- GARLIC -->
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:padding="12dp" android:background="#F3E5F5" android:layout_margin="8dp">
+                <ImageView android:layout_width="60dp" android:layout_height="60dp" android:src="@drawable/garlic"/>
+                <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content" android:orientation="vertical" android:layout_marginStart="12dp">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Garlic - ₹120/kg" android:textStyle="bold"/>
+                    <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content">
+                        <Button android:id="@+id/gMinus" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="-" />
+                        <TextView android:id="@+id/gQty" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="0" android:padding="10dp"/>
+                        <Button android:id="@+id/gPlus" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="+" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- TOMATO -->
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:padding="12dp" android:background="#E3F2FD" android:layout_margin="8dp">
+                <ImageView android:layout_width="60dp" android:layout_height="60dp" android:src="@drawable/tomato"/>
+                <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content" android:orientation="vertical" android:layout_marginStart="12dp">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Tomato - ₹20/kg" android:textStyle="bold"/>
+                    <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content">
+                        <Button android:id="@+id/tMinus" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="-" />
+                        <TextView android:id="@+id/tQty" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="0" android:padding="10dp"/>
+                        <Button android:id="@+id/tPlus" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="+" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- CABBAGE -->
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:padding="12dp" android:background="#E8F5E9" android:layout_margin="8dp">
+                <ImageView android:layout_width="60dp" android:layout_height="60dp" android:src="@drawable/cabbage"/>
+                <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content" android:orientation="vertical" android:layout_marginStart="12dp">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Cabbage - ₹18/kg" android:textStyle="bold"/>
+                    <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content">
+                        <Button android:id="@+id/cMinus" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="-" />
+                        <TextView android:id="@+id/cQty" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="0" android:padding="10dp"/>
+                        <Button android:id="@+id/cPlus" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="+" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- CAULIFLOWER -->
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:padding="12dp" android:background="#FFF3E0" android:layout_margin="8dp">
+                <ImageView android:layout_width="60dp" android:layout_height="60dp" android:src="@drawable/cauliflower"/>
+                <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content" android:orientation="vertical" android:layout_marginStart="12dp">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Cauliflower - ₹25/kg" android:textStyle="bold"/>
+                    <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content">
+                        <Button android:id="@+id/caMinus" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="-" />
+                        <TextView android:id="@+id/caQty" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="0" android:padding="10dp"/>
+                        <Button android:id="@+id/caPlus" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="+" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- BRINJAL -->
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:padding="12dp" android:background="#F3E5F5" android:layout_margin="8dp">
+                <ImageView android:layout_width="60dp" android:layout_height="60dp" android:src="@drawable/brinjal"/>
+                <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content" android:orientation="vertical" android:layout_marginStart="12dp">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Brinjal - ₹22/kg" android:textStyle="bold"/>
+                    <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content">
+                        <Button android:id="@+id/bMinus" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="-" />
+                        <TextView android:id="@+id/bQty" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="0" android:padding="10dp"/>
+                        <Button android:id="@+id/bPlus" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="+" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- CHILLI -->
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:padding="12dp" android:background="#FFEBEE" android:layout_margin="8dp">
+                <ImageView android:layout_width="60dp" android:layout_height="60dp" android:src="@drawable/chilli"/>
+                <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content" android:orientation="vertical" android:layout_marginStart="12dp">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Green Chilli - ₹40/kg" android:textStyle="bold"/>
+                    <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content">
+                        <Button android:id="@+id/chMinus" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="-" />
+                        <TextView android:id="@+id/chQty" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="0" android:padding="10dp"/>
+                        <Button android:id="@+id/chPlus" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="+" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- CAPSICUM -->
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:padding="12dp" android:background="#E0F7FA" android:layout_margin="8dp">
+                <ImageView android:layout_width="60dp" android:layout_height="60dp" android:src="@drawable/capsicum"/>
+                <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content" android:orientation="vertical" android:layout_marginStart="12dp">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Capsicum - ₹35/kg" android:textStyle="bold"/>
+                    <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content">
+                        <Button android:id="@+id/capMinus" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="-" />
+                        <TextView android:id="@+id/capQty" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="0" android:padding="10dp"/>
+                        <Button android:id="@+id/capPlus" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="+" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- CARROT -->
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:padding="12dp" android:background="#FFF8E1" android:layout_margin="8dp">
+                <ImageView android:layout_width="60dp" android:layout_height="60dp" android:src="@drawable/carrot"/>
+                <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content" android:orientation="vertical" android:layout_marginStart="12dp">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Carrot - ₹30/kg" android:textStyle="bold"/>
+                    <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content">
+                        <Button android:id="@+id/carMinus" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="-" />
+                        <TextView android:id="@+id/carQty" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="0" android:padding="10dp"/>
+                        <Button android:id="@+id/carPlus" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="+" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- SPINACH -->
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:padding="12dp" android:background="#E8F5E9" android:layout_margin="8dp">
+                <ImageView android:layout_width="60dp" android:layout_height="60dp" android:src="@drawable/spinach"/>
+                <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content" android:orientation="vertical" android:layout_marginStart="12dp">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Spinach - ₹10/bunch" android:textStyle="bold"/>
+                    <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content">
+                        <Button android:id="@+id/sMinus" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="-" />
+                        <TextView android:id="@+id/sQty" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="0" android:padding="10dp"/>
+                        <Button android:id="@+id/sPlus" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="+" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- CORIANDER -->
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:padding="12dp" android:background="#E8F5E9" android:layout_margin="8dp">
+                <ImageView android:layout_width="60dp" android:layout_height="60dp" android:src="@drawable/coriander"/>
+                <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content" android:orientation="vertical" android:layout_marginStart="12dp">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Coriander - ₹10/bunch" android:textStyle="bold"/>
+                    <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content">
+                        <Button android:id="@+id/coMinus" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="-" />
+                        <TextView android:id="@+id/coQty" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="0" android:padding="10dp"/>
+                        <Button android:id="@+id/coPlus" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="+" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- GINGER -->
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:padding="12dp" android:background="#FBE9E7" android:layout_margin="8dp">
+                <ImageView android:layout_width="60dp" android:layout_height="60dp" android:src="@drawable/ginger"/>
+                <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content" android:orientation="vertical" android:layout_marginStart="12dp">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Ginger - ₹80/kg" android:textStyle="bold"/>
+                    <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content">
+                        <Button android:id="@+id/giMinus" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="-" />
+                        <TextView android:id="@+id/giQty" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="0" android:padding="10dp"/>
+                        <Button android:id="@+id/giPlus" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="+" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- TOTAL -->
+            <TextView
+                android:id="@+id/tvTotal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Total = ₹0"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:paddingTop="20dp"/>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <!-- 🔻 BOTTOM NAV BAR -->
+    <LinearLayout
+        android:id="@+id/bottomBar"
+        android:layout_width="match_parent"
+        android:layout_height="65dp"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal"
+        android:background="#FFFFFF"
+        android:elevation="12dp"
+        android:weightSum="4">
+
+        <!-- ADD -->
+        <LinearLayout
+            android:id="@+id/navAdd"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="26dp"
+                android:layout_height="26dp"
+                android:src="@android:drawable/ic_input_add"
+                android:tint="#2E7D32"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Add"
+                android:textColor="#2E7D32"
+                android:textSize="12sp"
+                android:textStyle="bold"/>
+        </LinearLayout>
+
+        <!-- CART -->
+        <LinearLayout
+            android:id="@+id/navCart"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="26dp"
+                android:layout_height="26dp"
+                android:src="@android:drawable/ic_menu_view"
+                android:tint="#2E7D32"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Cart"
+                android:textColor="#2E7D32"
+                android:textSize="12sp"
+                android:textStyle="bold"/>
+        </LinearLayout>
+
+        <!-- ORDERS -->
+        <LinearLayout
+            android:id="@+id/navOrders"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="26dp"
+                android:layout_height="26dp"
+                android:src="@android:drawable/ic_menu_agenda"
+                android:tint="#2E7D32"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Orders"
+                android:textColor="#2E7D32"
+                android:textSize="12sp"
+                android:textStyle="bold"/>
+        </LinearLayout>
+
+        <!-- TRACK -->
+        <LinearLayout
+            android:id="@+id/navTrack"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="26dp"
+                android:layout_height="26dp"
+                android:src="@android:drawable/ic_menu_mylocation"
+                android:tint="#2E7D32"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Track"
+                android:textColor="#2E7D32"
+                android:textSize="12sp"
+                android:textStyle="bold"/>
+        </LinearLayout>
+
+    </LinearLayout>
+</RelativeLayout>
